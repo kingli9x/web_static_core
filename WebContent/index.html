@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Test document ready</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>                             
+            $(function(){
+                f1();
+                function f1(){
+                    console.log("hihihi");
+                }
+                $("#btn1").click(function(){
+                    $("#firstname").show();
+                });
+            });            
+        </script>
+    </head>
+    <body>
+        <div id="div1">Div 1</div>
+        <div id="div2">Div 2</div>
+        <div id="div3">Div 3</div>
+        <input type="button" id ="btn1" value="Button 1">
+        <input type="button" id ="btn2" value="button 2">
+        <input type="button" id ="btn3" value="button 3">        
+        <table style="width:100%">
+            <tr style="display:none">
+              <th hidden="true" id="firstname">Firstname</th>
+              <th>Lastname</th> 
+              <th>Age</th>
+            </tr>
+            <tr>
+              <td>Jill</td>
+              <td>Smith</td> 
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Eve</td>
+              <td>Jackson</td> 
+              <td>94</td>
+            </tr>
+          </table>
+    </body>    
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>First JQuery Lesson</title>
+<meta charset="UTF-8">
+<!-- Co the dung jquery tu tai nguyen internet (cdn) hoac tu may cuc bo -->
+<script language="javascript"
+	src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+<script language="javascript">
+        // jquery được sinh ra để viết code javascript dễ dạng hơn
+        // chẳng hạn trước đây với javascript, để viết code xử lý khi click vào 1 button thì có đoạn lệnh onclick tại code html của button và rồi ra phần javascript thì có 
+        // code định nghĩa function cho code xử lý. giờ với jquery thì chỉ cần có id của button đó và rồi viết 
+        // $("#idbutton").click(function(){
+        // ...// code xử lý
+        // })
+        // như vậy, (chủ yếu) khi viết code jquery là phải có code slector     
+        // vấn đề là selector phải hiểu được thành phần html đó. đôi khi gặp tình trạng code script viết trên code html và script không hiểu được selector
+        // vì vậy, khi dùng jquery người ta hay có đoạn lệnh mang ý nghãi tài liệu load xong rồi mới chạy script
+        // đó chính là document ready    
+        // tóm lại cứu để code trong lệnh docuemtn ready này cho chắc
+        // ...
+	$(document).ready(function(){
+		$('#id-button').click(function(){
+			var idText = $('#id-text');
+			alert(idText.val());			
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<h1>jquery</h1>
+	<input type="text" id="id-text" value="" />
+	<br>
+	<input type="button" id="id-button" value="Alert" />
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <<p id="demo"></p>
+        <script>
+             document.getElementById("demo").innerHTML =
+                    typeof "john" + "<br>" +
+                    typeof 3.14 + "<br>" +
+                    typeof false + "<br>" +
+                    typeof [1, 2, 3, 4] + "<br>" +
+                    typeof {name: 'john', age: 34}
+
+            ;
+            /* 1. kiểu số */
+            console.log("____ KIỂU NUMBER ___");
+            var n1 = 4;
+            var n2 = -3.02e2;
+            console.log(n1);
+            console.log(n2);
+            console.log(typeof n1);
+
+            /* 2. kiểu string */
+            console.log("____ KIỂU STRING ___");
+            var s1 = "hihi";
+            var s2 = 'huhu';
+            console.log(s1);
+            console.log(s2);
+            var type = typeof s1;
+            console.log(type);
+
+            /* 3. kiểu boolean */
+            console.log("____ KIỂU BOOLEAN ___");
+            var b1 = true;
+            var b2 = false;
+            console.log(b1);
+            console.log(b2);
+            console.log(typeof b1);
+
+            /* 4. kiểu mảng */
+            console.log("____ KIỂU MẢNG ___");
+            var mang1 = [1, 2, 3, 4, 5];
+            // truy nhap phan tu cua mang su dung cap dau [] 
+            // vd mang1[0]
+            // không được sử dụng dấu . vd: mang1.0
+            console.log(mang1[0]); // 1
+            // vd lay ra tat cac phan tu cua mang
+            for (i = 0; i < mang1.length; i++) {
+                console.log(mang1[i]);
+            }
+            // chu y: cac phan tu cua mang khong yeu cau co cung kieu du lieu
+            console.log("	_____mảng gồm cả số và string ____");
+            var mang2 = [1, 'a', 3, "fsdfsd", 5];
+            for (i = 0; i < mang2.length; i++) {
+                console.log("	" + mang2[i]);
+            }
+            // mảng được coi là có kiểu object
+            console.log(typeof mang1); // object
+
+            /* 4. kiểu object */
+            console.log("_____kiểu đối tượng_________");
+            // khai bao doi tuong
+            var doituong1 = {ten: 'ronaldo', tuoi: 29};
+            // kieu cua doituong1 la object
+            console.log(typeof doituong1); // object
+            // truy nhap thuoc tinh  cua doi tuong, co 2 cach:
+            console.log(doituong1.ten);
+            console.log(doituong1['ten']);
+            // lay ra tat cac thuoc tinh cua doi tuong 1
+            for (key in doituong1) {
+                console.log(doituong1[key]);
+
+            }
+            console.log("______vd duyệt mảng có kiểu đối tượng ________");
+            var mang2 = [1, "434", 'hh', doituong1];
+            for (i = 0; i < mang2.length; i++) {
+                console.log(mang2[i]);
+            }
+
+
+            /* kiểu dữ liệu*/
+             console.log("______________");
+            var x;
+            console.log(x); // undefined
+            function person(firstname, lastname, age, eyecolor)
+            {
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.age = age;
+                this.eyecolor = eyecolor;
+            }
+            myFather = new person();
+            myMother = new person("Maria", "Smith", 45, "blue");
+            console.log(myFather); // person {firstname: undefined, lastname: undefined, age: undefined, eyecolor: undefined}
+            console.log(myMother); // person {firstname: "Maria", lastname: "Smith", age: 45, eyecolor: "blue"}
+        </script>
+    </body>
+</html>

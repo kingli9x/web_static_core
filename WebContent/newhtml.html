@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Test document ready</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $("#div1").text("content of div 1 has change");    
+            $("#btn1").click(function(){
+                alert("button 1");
+            });             
+                 
+            $(function(){
+                $("#div2").text("content of div 2 has change");    
+                $("#btn2").click(function(){
+                    alert("button 2");
+                });
+            });            
+        </script>
+    </head>
+    <body>
+        <div id="div1">Div 1</div>
+        <div id="div2">Div 2</div>
+        <div id="div3">Div 3</div>
+        <input type="button" id ="btn1" value="Button 1">
+        <input type="button" id ="btn2" value="button 2">
+        <input type="button" id ="btn3" value="button 3">
+        <script>
+            $("#div3").text("content of div 3 has change");    
+            $("#btn3").click(function(){
+                alert("button 3");
+            });   
+        </script>
+    </body>    
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Các kiểu dữ liệu trong javascript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        bài này trình bày về các kiểu dữ liệu. 
+        mở console trình duyệt và code project để xem song song
+        <script>
+            /* kiểu dữ liệu
+             javascript có 7 kiểu dữ liệu như sau:
+             1. Number
+             2. String
+             3. Boolean
+             4. Object
+             5. Null
+             6. Undefined
+             7. Symbol (new in ECMAScript 6)
+             
+             trong ds trên, trừ kiểu số 4 (Object) ra thì các kiểu còn lại được gọi là kiểu nguyên thủy (primitive) (kể cả null, undefined, symbol)
+             
+             tất cả các biến khi khai báo đều dùng từ khóa var
+             mà không phải chỉ định rõ kiểu như các nnlt khác
+             javascript sẽ tự nhận biết kiểu dữ liệu dựa vào giá trị được gán cho biến (Dynamic typing)
+             
+             - danh sách trên là danh sách tất cả các kiểu dữ liệu của javascript
+             - chú ý về toán tử typeof: toán từ typeof vẫn làm việc theo kiểu của riêng nó, vd typeof của 1 object có thể trả về Function, typeof null không trả về null mà lại về object... cái này là do thiết kế của javascript
+             
+             */
+
+// kiểu dữ liệu number
+// javascript không phân biệt cụ thể kiểu nguyên, thực... tất cả được coi là kiểu number
+            var n1 = 1;
+            var n2 = -1;
+            var n3 = 1.1;
+            var n4 = -1.1;
+            var n5 = 1.3e99;
+            var n6 = -0.3e99;
+
+// kiểu string
+// có thể biểu diễn bằng dấu ngoặc kép hoặc ngoặc đơn
+            var s1 = 'abc';
+            var s2 = '';
+            var s3 = "a";
+            var s4 = "";
+
+// kiểu boolean
+            var b1 = true;
+            var b2 = false;
+
+//kiểu object
+            var o1 = {ma: 123, ten: "hihi", go: function () {}};
+// javascript xây dựng sẵn 1 số đối tượng như document, windows, Date... 
+            var o2 = document;
+            var o3 = window;
+            var o4 = Date;
+            var o5 = new Date();
+
+// kiểu mảng
+// mảng thực chất là kiểu object
+// 1 mảng tương đương với 1 object mà các phần tử của object đó có các thuộc tính tên là 0, 1,... 
+// (tương ứng với các phần từ 0, 1 của mảng)
+// trong mảng có thể chứa các phần tử có kiểu dữ liệu giống hoặc khác nhau
+            var m1 = ["Saab", "Volvo", "BMW"];
+            var m2 = [1, "Volvo", "BMW"];
+            var m3 = ["Saab", 23, true, {ma: 1, ten: 'fs'}];
+
+// null, undefined và 1 số khai báo đặc biệt
+            var v1 = null; // chú ý null được coi là kiểu dữ liệu primitive nhưng typeof null trả về object (vì thiết kế nó thế!!!)
+            var v2 = undefined;
+            var v3 = [];
+            var v4 = {};// v4 la 1 object ma khong co thuoc tinh, khac voi null
+            var v5 = function () {
+            }
+
+            function v6() {
+            }
+
+// với các kiểu nguyên thủy có thể tạo các đối tượng tương ứng từ các lớp String, Number, Boolean (tương tự lớp bao java)
+
+// test
+            console.log("gia tri cua n1: ");
+            console.log(n1);
+            console.log("typeof n1:");
+            console.log(typeof n1);
+            console.log("***********************************");
+
+            console.log("gia tri cua n2: ");
+            console.log(n2);
+            console.log("typeof n2:");
+            console.log(typeof n2);
+            console.log("***********************************");
+
+            console.log("gia tri cua n3: ");
+            console.log(n3);
+            console.log("typeof n3:");
+            console.log(typeof n3);
+            console.log("***********************************");
+
+            console.log("gia tri cua n4: ");
+            console.log(n4);
+            console.log("typeof n4:");
+            console.log(typeof n4);
+            console.log("***********************************");
+
+            console.log("gia tri cua n5: ");
+            console.log(n5);
+            console.log("typeof n5:");
+            console.log(typeof n5);
+            console.log("***********************************");
+
+            console.log("gia tri cua n6: ");
+            console.log(n6);
+            console.log("typeof n6:");
+            console.log(typeof n6);
+            console.log("***********************************");
+
+            console.log("gia tri cua s1: ");
+            console.log(s1);
+            console.log("typeof s1:");
+            console.log(typeof s1);
+            console.log("***********************************");
+
+            console.log("gia tri cua s2: ");
+            console.log(s2);
+            console.log("typeof s2:");
+            console.log(typeof s2);
+            console.log("***********************************");
+
+            console.log("gia tri cua s3: ");
+            console.log(s3);
+            console.log("typeof s3:");
+            console.log(typeof s3);
+            console.log("***********************************");
+
+            console.log("gia tri cua s4: ");
+            console.log(s4);
+            console.log("typeof s4:");
+            console.log(typeof s4);
+            console.log("***********************************");
+
+            console.log("gia tri cua b1: ");
+            console.log(b1);
+            console.log("typeof b1:");
+            console.log(typeof b1);
+            console.log("***********************************");
+
+            console.log("gia tri cua b2: ");
+            console.log(b2);
+            console.log("typeof b2:");
+            console.log(typeof b2);
+            console.log("***********************************");
+
+            console.log("gia tri cua o1: ");
+            console.log(o1);
+            console.log("typeof o1:");
+            console.log(typeof o1);
+            console.log("***********************************");
+
+            console.log("gia tri cua o2: ");
+            console.log(o2);
+            console.log("typeof o2:");
+            console.log(typeof o2);
+            console.log("***********************************");
+
+            console.log("gia tri cua o3: ");
+            console.log(o3);
+            console.log("typeof o3:");
+            console.log(typeof o3);
+            console.log("***********************************");
+
+            console.log("gia tri cua o4: ");
+            console.log(o4);
+            console.log("typeof o4:");
+            console.log(typeof o4);
+            console.log("***********************************");
+
+            console.log("gia tri cua o5: ");
+            console.log(o5);
+            console.log("typeof o5:");
+            console.log(typeof o5);
+            console.log("***********************************");
+
+            console.log("gia tri cua m1: ");
+            console.log(m1);
+            console.log("typeof m1:");
+            console.log(typeof m1);
+            console.log("***********************************");
+
+            console.log("gia tri cua m2: ");
+            console.log(m2);
+            console.log("typeof m2:");
+            console.log(typeof m2);
+            console.log("***********************************");
+
+            console.log("gia tri cua m3: ");
+            console.log(m3);
+            console.log("typeof m3:");
+            console.log(typeof m3);
+            console.log("***********************************");
+
+            console.log("gia tri cua v1: ");
+            console.log(v1);
+            console.log("typeof v1:");
+            console.log(typeof v1);
+            console.log("***********************************");
+
+            console.log("gia tri cua v2: ");
+            console.log(v2);
+            console.log("typeof v2:");
+            console.log(typeof v2);
+            console.log("***********************************");
+
+            console.log("gia tri cua v3: ");
+            console.log(v3);
+            console.log("typeof v3:");
+            console.log(typeof v3);
+            console.log("***********************************");
+
+            console.log("gia tri cua v4: ");
+            console.log(v4);
+            console.log("typeof v4:");
+            console.log(typeof v4);
+            console.log("***********************************");
+
+            console.log("gia tri cua v5: ");
+            console.log(v5);
+            console.log("typeof v5:");
+            console.log(typeof v5);
+            console.log("***********************************");
+
+            console.log("gia tri cua v6: ");
+            console.log(v6);
+            console.log("typeof v6:");
+            console.log(typeof v6);
+            console.log("***********************************");
+
+        </script>
+    </body>
+</html>

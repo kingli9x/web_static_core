@@ -1,0 +1,44 @@
+<!--  
+        theo đúng chuẩn:
+        
+        + Mỗi element chỉ có 1 ID. Bạn ko thể chồng tính chất của ID vào 1 element bằng cách add cho element đó 2 id như class dc :D
+        + Mỗi trang chỉ nên có 1 element với 1 ID (vì nếu dùng JS để làm gì đó thì nó chỉ bắt cái ID trùng đầu tiên nên web chuẩn thì 1 trang chỉ nên có 1 element với 1 ID)
+
+        + Bạn có thể dùng nhiều class cho 1 element (tính chất của element sẽ là tính chất CSS của tất cả các class đó cộng lại)
+        + Bạn có thể dùng 1 class cho nhiều element (những element có chưa class giống nhau sẽ có phần tính chất css của class đó)
+        
+        + nếu 1 phần tử có cả class và id thì id được ưu tiên hơn
+        
+        nếu không làm theo đúng chuẩn như trên thì có thể dẫn đến lỗi không mong muốn (trình duyệt không render, javascript chỉ bắt ID đầu tiên..)
+        
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+
+        <style>
+            .blue{
+                background-color: blue;
+            }
+            .yellow{
+                background-color: yellow;
+            }
+            #div1{
+                width: 100px;
+                height: 100px;
+            }
+            #div2{
+                width: 100px;
+                height: 100px;
+            } 
+
+        </style>
+    </head>
+    <body>
+        <div id="div1" class="blue"></div>
+        <div id="div2" class="yellow"></div>
+    </body>
+</html>

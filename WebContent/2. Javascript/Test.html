@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <script>
+            var y = 0377;
+var z = 0xFF;
+document.write(y + "<br>");//255
+document.write(z + "<br>");//255
+var x = 1000;
+if (!isNaN(x))
+    document.write("fdfsdfhuhu");
+; // returns true
+var y = "abc";
+isNaN(y); // returns false
+
+var myNumber = 128;
+myNumber.toString(16); // returns 80
+myNumber.toString(8); // returns 200
+myNumber.toString(2); // returns 10000000
+document.write(myNumber);
+document.write(myNumber.toString(2));
+document.write(myNumber);
+
+// dinh nghia 1 kieu doi tuong
+function person(firstname, lastname, age, eyecolor)
+{
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.age = age;
+    this.eyecolor = eyecolor;
+}
+
+// tao cac doi tuong co kieu myFather
+myFather = new person("John", "Doe", 50, "blue");
+myMother = new person("Maria", "Smith", 45, "blue");
+
+// bo sung them 1 thuoc tinh cho doi thuong myFather
+// chu y: chi doi tuong myFather co thuoc tinh nay ma thoi
+myFather.weight = 88;
+
+
+// duyet cac gia tri thuoc tinh cua 1 doi tuong
+console.log("------myFather--------");
+for(var key in myFather) {
+    var value = myFather[key];
+    console.log(key +" : " +value);    
+}
+
+
+// bo sung them thuoc tinh weight cho kieu person. neu khong gan gia tri thi cac
+// doi tuong chua so huu thuoc tinh kieu do
+person.prototype.weight;// = 1000;
+
+mySon = new person("hihi");
+
+console.log("----mySon----------");
+for(var key in mySon) {
+    var value = mySon[key];
+    console.log(key +" : " +value);   
+}
+
+console.log("------myMother--------");
+for(var key in myMother) {
+    var value = myMother[key];
+    console.log(key +" : " +value);   
+}
+
+// rieng doi tuong myFather van co weight = 88 vi luc truoc co roi
+console.log("------myFather--------");
+for(var key in myFather) {
+    var value = myFather[key];
+    console.log(key +" : " +value);    
+}
+
+// bay gio 
+person.prototype.weight = 1000;
+console.log("----mySon----------");
+for(var key in mySon) {
+    var value = mySon[key];
+    console.log(key +" : " +value);   
+}
+
+console.log("------myMother--------");
+for(var key in myMother) {
+    var value = myMother[key];
+    console.log(key +" : " +value);   
+}
+
+console.log("------myFather--------");
+for(var key in myFather) {
+    var value = myFather[key];
+    console.log(key +" : " +value);    
+}
+        </script>
+    </body>
+</html>
