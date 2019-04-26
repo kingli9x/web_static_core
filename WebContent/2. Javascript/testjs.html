@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	function getData(){
+		
+			$.post("https://www.w3schools.com/jquery/demo_test_post.asp",
+			{
+				name: "Donald Duck",
+				city: "Duckburg"
+			},
+			function(data,status){
+				console.log("11");
+			});
+		
+        $.post("https://www.w3schools.com/jquery/demo_test_post.asp",
+			{
+				name: "Donald Duck",
+				city: "Duckburg"
+			},
+			function(data,status){
+				console.log("12");
+			});
+            
+                    $.post("https://www.w3schools.com/jquery/demo_test_post.asp",
+			{
+				name: "Donald Duck",
+				city: "Duckburg"
+			},
+			function(data,status){
+				console.log("13");
+			});
+            
+                                $.post("https://www.w3schools.com/jquery/demo_test_post.asp",
+			{
+				name: "Donald Duck",
+				city: "Duckburg"
+			},
+			function(data,status){
+				console.log("14");
+			});
+            
+                                $.post("https://www.w3schools.com/jquery/demo_test_post.asp",
+			{
+				name: "Donald Duck",
+				city: "Duckburg"
+			},
+			function(data,status){
+				console.log("15");
+			});
+            
+                                $.post("https://www.w3schools.com/jquery/demo_test_post.asp",
+			{
+				name: "Donald Duck",
+				city: "Duckburg"
+			},
+			function(data,status){
+				console.log("16");
+			});
+            
+		for(var i = 0; i< 10000; i++){
+			console.log(i);
+		}
+        
+    }
+    function getData2(){
+		
+			$.post("https://www.w3schools.com/jquery/demo_test_post.asp",
+			{
+				name: "Donald Duck",
+				city: "Duckburg"
+			},
+			function(data,status){
+				console.log("21");
+			});
+            
+            			$.post("https://www.w3schools.com/jquery/demo_test_post.asp",
+			{
+				name: "Donald Duck",
+				city: "Duckburg"
+			},
+			function(data,status){
+				console.log("22");
+			});
+            
+            
+            			$.post("https://www.w3schools.com/jquery/demo_test_post.asp",
+			{
+				name: "Donald Duck",
+				city: "Duckburg"
+			},
+			function(data,status){
+				console.log("23");
+			});
+            
+                        			$.post("https://www.w3schools.com/jquery/demo_test_post.asp",
+			{
+				name: "Donald Duck",
+				city: "Duckburg"
+			},
+			function(data,status){
+				console.log("24");
+			});
+            
+                        			$.post("https://www.w3schools.com/jquery/demo_test_post.asp",
+			{
+				name: "Donald Duck",
+				city: "Duckburg"
+			},
+			function(data,status){
+				console.log("25");
+			});
+            
+                        			$.post("https://www.w3schools.com/jquery/demo_test_post.asp",
+			{
+				name: "Donald Duck",
+				city: "Duckburg"
+			},
+			function(data,status){
+				console.log("26");
+			});
+		
+		for(var i = -1; i> -1000; i--){
+			console.log(i);
+		}
+    }
+    
+    $("#button1").click(function(){
+        getData();
+    });
+    $("#button2").click(function(){
+    	getData2();
+    });
+    $("#button3").click(function(){
+    	$("#button2").click();
+        $("#button1").click();
+    });
+});
+</script>
+</head>
+<body>
+
+<button id = "button1">Button 1</button>
+<button id = "button2">Button 2</button>
+<button id = "button3">Button 3</button>
+
+
+<div id = "div1">...</div>
+</body>
+</html>
