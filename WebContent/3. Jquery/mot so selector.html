@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>First JQuery Lesson</title>
+<meta charset="UTF-8">
+<!-- Co the dung jquery tu tai nguyen internet (cdn) hoac tu may cuc bo -->
+<script language="javascript"
+	src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+<script language="javascript">
+
+	$(document).ready(function(){
+		$('#id-button').click(function(){
+			var idText = $('#id-text');
+			alert(idText.val());			
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<h1>jquery</h1>
+	<input type="text" id="id-text" value="" />
+	<br>
+	<input type="button" id="id-button" value="Alert" />
+
+</body>
+</html>

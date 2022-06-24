@@ -13,16 +13,21 @@
         // $("#idbutton").click(function(){
         // ...// code xử lý
         // })
-        // như vậy, (chủ yếu) khi viết code jquery là phải có code slector     
+        // như vậy, (chủ yếu) khi viết code jquery là phải có code selector
         // vấn đề là selector phải hiểu được thành phần html đó. đôi khi gặp tình trạng code script viết trên code html và script không hiểu được selector
         // vì vậy, khi dùng jquery người ta hay có đoạn lệnh mang ý nghãi tài liệu load xong rồi mới chạy script
         // đó chính là document ready    
-        // tóm lại cứu để code trong lệnh docuemtn ready này cho chắc
+        // tóm lại cứ để code trong lệnh document ready này cho chắc
         // ...
 	$(document).ready(function(){
 		$('#id-button').click(function(){
 			var idText = $('#id-text');
 			alert(idText.val());			
+		});
+		
+		$('#btnGetType').click(function(){
+			var type = $('#A_DGC_THETRANG_1').prop('type');
+			alert(type);			
 		});
 		
 	});
@@ -31,8 +36,10 @@
 <body>
 	<h1>jquery</h1>
 	<input type="text" id="id-text" value="" />
+	<input type="checkbox" id="A_DGC_THETRANG_1"> <label for="hihi" class="label1">Gầy</label>
 	<br>
 	<input type="button" id="id-button" value="Alert" />
+	<input type="button" id="btnGetType" value="get type" />
 
 </body>
 </html>
